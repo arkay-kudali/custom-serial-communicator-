@@ -1,117 +1,69 @@
-custom-serial-communicator
+# Custom Serial Communicator 🚀
 
-Simple Python GUI tool for serial communication with microcontrollers such as Arduino, ESP32, and other UART-based boards.
+## Introduction 📖
+Welcome to the Custom Serial Communicator! This project is designed for hobbyists and beginners who want to dive into serial communication.
 
-The program is built using PyQt5 and pyserial and allows sending commands and reading serial output from connected devices.
+---
 
-Latest version: v1.8
+## Table of Contents 🔍
+1. [Getting Started](#getting-started)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Tips for Beginners](#tips-for-beginners)
+5. [License](#license)
 
-Features
+---
 
-GUI based serial communication
+## Getting Started 🛠️
+To get started with the Custom Serial Communicator, follow these simple steps!
 
-Automatic COM port detection
+### Requirements
+- ✅ [Arduino IDE](https://www.arduino.cc/en/main/software)
+- ✅ Basic understanding of Arduino programming
 
-Baudrate selection
+---
 
-Send serial commands
+## Installation 📦
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/arkay-kudali/custom-serial-communicator.git
+   ```
+2. **Navigate to the project folder:**
+   ```bash
+   cd custom-serial-communicator
+   ```
+3. **Open the Arduino IDE and load the project.**
 
-Receive serial data
+---
 
-Connect / Disconnect control
+## Usage 🖥️
+1. **Connect your Arduino board to your computer.**
+2. **Select the correct board and port in the Arduino IDE.**
+3. **Upload the sketch to your board.**
+4. **Open the Serial Monitor.**
 
-Port refresh button
+### Example Code 🌟
+Here's a simple example to get you started:
+```cpp
+void setup() {
+  Serial.begin(9600);
+}
 
-Clear output window
+void loop() {
+  Serial.println("Hello, Serial Communication!");
+  delay(1000);
+}
+}
+```
 
-Repository Structure
-custom-serial-communicator/
+---
 
-application/
-    executable versions (.exe)
+## Tips for Beginners 🌈
+- 📌 **Read the Arduino Documentation:** Familiarize yourself with the Arduino programming language.
+- 🔄 **Experiment:** Try modifying the example code to see how it affects the output.
+- 💬 **Ask for Help:** Don’t hesitate to reach out to the community for support!
 
-SERIAL_COM_1_1.py
-SERIAL_COM_1_2.py
-SERIAL_COM_1_3.py
-SERIAL_COM_1_4.pyw
-SERIAL_COM_1_5.pyw
-SERIAL_COM_1_6.pyw
-SERIAL_COM_1_7.pyw
-SERIAL_COM_1_8.py   ← latest version
+---
 
-README.md
-
-Older versions are kept in the repository for reference.
-
-Requirements
-
-Python 3.8+
-
-Required libraries:
-
-PyQt5
-
-pyserial
-
-Install Dependencies
-Windows
-
-Open Command Prompt:
-
-pip install PyQt5 pyserial
-Linux (Ubuntu / Debian)
-sudo apt update
-sudo apt install python3-pip
-pip3 install PyQt5 pyserial
-macOS
-pip3 install PyQt5 pyserial
-Running the Program
-
-Run the latest version:
-
-python SERIAL_COM_1_8.py
-
-or
-
-python3 SERIAL_COM_1_8.py
-Using the Application
-
-Connect your microcontroller via USB.
-
-Select the COM port from the dropdown.
-
-Choose the baudrate matching your device.
-
-Click Connect.
-
-Enter text in the input box.
-
-Click Send to transmit data.
-
-Incoming data will appear in the output window.
-
-Hardware Tested
-
-Works with boards such as:
-
-Arduino Uno
-
-Arduino Nano
-
-ESP32
-
-ESP8266
-
-Other UART devices
-
-Python Libraries Used
-PyQt5
-pyserial
-serial.tools.list_ports
-Notes
-
-The application auto-refreshes available serial ports.
-
-The GUI indicates connection status using a red / green indicator.
-
-Multiple versions are included in this repository to track development progress.
+## License 📄
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
